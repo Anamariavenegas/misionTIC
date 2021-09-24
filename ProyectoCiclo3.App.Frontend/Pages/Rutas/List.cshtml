@@ -1,34 +1,22 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListRutaModel
 @{
 }
  
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Origen</th>
-      <th scope="col">Destino</th>
-      <th scope="col">Tiempo_estimado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Portal norte</td>
-      <td>Portal Sur</td>
-      <td>120</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Portal sur</td>
-      <td>Ricaurte</td>
-      <td>60</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Portal norte</td>
-      <td>Portal 80</td>
-      <td>50</td>
-    </tr>
-  </tbody>
+<h1>Listado de Rutas</h1>
+<table class="table">
+    @foreach (var ruta in Model.Rutas)
+    {
+        <tr>
+            <td>@ruta.id</td>
+            <td>@ruta.origen</td>
+            <td>@ruta.destino</td>
+            <td>@ruta.tiempo_estimado</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-rutaId="@ruta.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" href="">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
 </table>

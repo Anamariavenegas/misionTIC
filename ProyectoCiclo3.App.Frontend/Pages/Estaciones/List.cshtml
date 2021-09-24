@@ -1,50 +1,24 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListEstacionModel
 @{
 }
  
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Coord_x</th>
-      <th scope="col">Coord_y</th>
-      <th scope="col">Tipo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Portal</td>
-      <td>Norte</td>
-      <td>1</td>
-      <td>10</td>
-      <td>Base</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Portal</td>
-      <td>Sur</td>
-      <td>10</td>
-      <td>1</td>
-      <td>Base</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Ricaurte</td>
-      <td>Centro</td>
-      <td>2</td>
-      <td>5</td>
-      <td>Trasbordo</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Portal 80</td>
-      <td>Occidente</td>
-      <td>8</td>
-      <td>3</td>
-      <td>Base</td>
-    </tr>
-  </tbody>
+<h1>Listado de Estaciones</h1>
+<table class="table">
+    @foreach (var estacion in Model.Estaciones)
+    {
+        <tr>
+            <td>@estacion.id</td>
+            <td>@estacion.nombre</td>
+            <td>@estacion.direccion</td>
+            <td>@estacion.coord_x</td>
+            <td>@estacion.coord_y</td>
+            <td>@estacion.tipo</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-estacionId="@estacion.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" href="">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
 </table>

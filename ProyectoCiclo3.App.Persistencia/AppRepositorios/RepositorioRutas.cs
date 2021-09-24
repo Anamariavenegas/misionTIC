@@ -11,7 +11,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
  
     public RepositorioRutas()
         {
-            buses= new List<Rutas>()
+            rutas= new List<Rutas>()
             {
                 new Rutas{id=1,origen=1,destino= 10,tiempo_estimado= 120},
                 new Rutas{id=2,origen=10,destino= 1,tiempo_estimado= 120},

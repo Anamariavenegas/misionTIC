@@ -11,7 +11,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
  
     public RepositorioEstaciones()
         {
-            buses= new List<Estaciones>()
+            estaciones= new List<Estaciones>()
             {
                 new Estaciones{id=1,nombre="Portal",direccion= "Norte",coord_x= 1,coord_y= 10,tipo= "Base"},
                 new Estaciones{id=2,nombre="Portal",direccion= "Sur",coord_x= 10,coord_y= 1,tipo= "Base"},
