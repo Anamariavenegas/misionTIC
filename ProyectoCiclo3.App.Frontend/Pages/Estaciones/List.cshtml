@@ -4,7 +4,16 @@
 }
  
 <h1>Listado de Estaciones</h1>
-<table class="table">
+<table class="table table-bordered border-success">
+  <thead class="table-dark">
+    <td>ID</td>
+    <td>NOMBRE</td>
+    <td>DIRECCION</td>
+    <td>COORDENADA_X</td>
+    <td>COORDENADA_Y</td>
+    <td>TIPO</td>
+    <td>ACCIONES</td>
+  </thead>
     @foreach (var estacion in Model.Estaciones)
     {
         <tr>

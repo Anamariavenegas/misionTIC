@@ -4,7 +4,14 @@
 }
  
 <h1>Listado de Rutas</h1>
-<table class="table">
+<table class="table table-bordered border-success">
+  <thead class="table-dark">
+    <td>ID</td>
+    <td>ORIGEN</td>
+    <td>DESTINO</td>
+    <td>TIEMPO_ESTIMADO</td>
+    <td>ACCIONES</td>
+  </thead>
     @foreach (var ruta in Model.Rutas)
     {
         <tr>
