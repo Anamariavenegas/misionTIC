@@ -29,6 +29,12 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         public Rutas GetRutaWithId(int id){
             return rutas.SingleOrDefault(b => b.id == id);
         }
+        public Rutas Create(Rutas newRuta)
+        {
+           newRuta.id=rutas.Max(r => r.id) +1; 
+           rutas.Add(newRuta);
+           return newRuta;
+        }
 
         public Rutas Update(Rutas newRuta){
             var ruta= rutas.SingleOrDefault(b => b.id == newRuta.id);
