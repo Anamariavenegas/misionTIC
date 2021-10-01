@@ -46,5 +46,12 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             }
         return estacion;
         }
+        public Estaciones Delete(int id)
+        {
+        var estacion= estaciones.SingleOrDefault(b => b.id == id);
+        estaciones.Remove(estacion);
+        return estacion;
+        }
+
     }
 }

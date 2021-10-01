@@ -10,19 +10,19 @@
       <div class="row justify-content-md-center">
         <div class="col-6 col-md-auto col-lg-4">
           <label for="id" class="form-label">Digite el ID:</label>
-          <input type="number" class="form-control" id="id" name="id" placeholder="Id" asp-for="@ruta.id">
+          <input type="number" class="form-control" id="id" name="id" placeholder="Id" asp-for="@ruta.id" required>
         </div>
         <div class="col-6 col-md-auto col-lg-4">
           <label for="origen" class="form-label">Digite el origen:</label>
-          <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" asp-for="@ruta.origen">
+          <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" asp-for="@ruta.origen" required>
         </div>
         <div class="col-6 col-md-auto col-lg-4">
           <label for="destino" class="form-label">Digite el destino:</label>
-          <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" asp-for="@ruta.destino">
+          <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" asp-for="@ruta.destino" required>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
           <label for="tiempo_estimado" class="form-label">Digite tiempo estimado:</label>
-          <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" placeholder="Tiempo_estimado" asp-for="@ruta.tiempo_estimado">
+          <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" placeholder="Tiempo_estimado" asp-for="@ruta.tiempo_estimado" required>
         </div>
       </div>
       <br>

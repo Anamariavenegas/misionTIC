@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5UQobbI65EYUtObxVJtpJI3rqU7/4apVkMF9aJ3JmGffK4CgXJozIy9QmrLyS9NUTHjUGkWmJ6sqEgIOECtq3Q==",
+  "dgSpecHash": "qPQScetX/gMxdJirr2f2fiZgZHImwMpzFw3e6UsWe1bLAf4qdEgBY64HUbyEp8dOTDtDBKizeJhIVYulzFGnKw==",
   "success": true,
   "projectFilePath": "D:\\AVP\\MISIONTIC\\CICLO 3\\DESARROLLO DE SOFTWARE\\PROYECTO PERSONAL\\misionTIC\\ProyectoCiclo3.App.Dominio\\ProyectoCiclo3.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
