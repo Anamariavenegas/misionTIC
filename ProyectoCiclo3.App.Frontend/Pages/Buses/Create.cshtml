@@ -8,29 +8,29 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-6 col-md-auto col-lg-4">
-          <label for="id" class="form-label">Digite el ID:</label>
-          <input type="number" class="form-control" id="id" name="id" placeholder="Id" required>
-        </div>
-        <div class="col-6 col-md-auto col-lg-4">
-          <label for="marca" class="form-label">Digite la marca:</label>
-          <input type="text" class="form-control" id="marca" name="marca" placeholder="Marca" required>
+          <label for="marca" class="form-label">Marca:</label>
+          <input type="text" class="form-control" placeholder="Marca" asp-for="Bus.marca">
+          <span class="text-danger" asp-validation-for="Bus.marca"></span>
         </div>
         <div class="col-6 col-md-auto col-lg-4">
           <label for="modelo" class="form-label">Digite el modelo:</label>
-          <input type="number" class="form-control" id="modelo" name="modelo" placeholder="Modelo" required>
+          <input type="number" class="form-control" placeholder="Modelo" asp-for="Bus.modelo">
+          <span class="number-danger" asp-validation-for="Bus.modelo"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
           <label for="kilometraje" class="form-label">Digite el kilometraje</label>
-          <input type="number" class="form-control" id="kilometraje" name="kilometraje" placeholder="kilometraje" required>
+          <input type="number" class="form-control" placeholder="kilometraje" asp-for="Bus.kilometraje">
+          <span class="number-danger" asp-validation-for="Bus.kilometraje"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
           <label for="numero_asientos" class="form-label">Digite el numero de asientos:</label>
-          <input type="number" class="form-control" id="num_asientos" name="num_asientos"
-            placeholder="# de asientos" required>
+          <input type="number" class="form-control" placeholder="# de asientos" asp-for="Bus.num_asientos">
+          <span class="number-danger" asp-validation-for="Bus.num_asientos"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
           <label for="Placa" class="form-label">Digite la placa del bus:</label>
-          <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa" required minlength="6" maxlength="6">
+          <input type="text" class="form-control" placeholder="Placa" asp-for="Bus.placa" required minlength="6" maxlength="6">
+          <span class="text-danger" asp-validation-for="Bus.placa"></span>
         </div>
       </div>
       <br>

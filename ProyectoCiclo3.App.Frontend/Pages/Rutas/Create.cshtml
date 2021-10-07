@@ -8,20 +8,19 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-6 col-md-auto col-lg-4">
-          <label for="id" class="form-label">Digite el ID:</label>
-          <input type="number" class="form-control" id="id" name="id" placeholder="Id" required>
+          <label for="origen" class="form-label">Digite el origen:</label>
+          <input type="number" class="form-control" placeholder="Origen" asp-for="Ruta.origen">
+          <span class="number-danger" asp-validation-for="Ruta.origen"></span>
         </div>
         <div class="col-6 col-md-auto col-lg-4">
-          <label for="marca" class="form-label">Digite el origen:</label>
-          <input type="number" class="form-control" id="origen" name="origen" placeholder="Origen" required>
-        </div>
-        <div class="col-6 col-md-auto col-lg-4">
-          <label for="modelo" class="form-label">Digite el destino:</label>
-          <input type="number" class="form-control" id="destino" name="destino" placeholder="Destino" required>
+          <label for="destino" class="form-label">Digite el destino:</label>
+          <input type="number" class="form-control" placeholder="Destino" asp-for="Ruta.destino">
+          <span class="number-danger" asp-validation-for="Ruta.destino"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="kilometraje" class="form-label">Digite tiempo estimado:</label>
-          <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" placeholder="Tiempo_estimado" required>
+          <label for="tiempo_estimado" class="form-label">Digite tiempo estimado:</label>
+          <input type="number" class="form-control" placeholder="Tiempo_estimado" asp-for="Ruta.tiempo_estimado">
+          <span class="number-danger" asp-validation-for="Ruta.tiempo_estimado"></span>
         </div>
       </div>
       <br>

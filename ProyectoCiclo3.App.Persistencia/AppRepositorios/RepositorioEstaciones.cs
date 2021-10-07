@@ -7,50 +7,43 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioEstaciones
     {
-        List<Estaciones> estaciones;
- 
-    public RepositorioEstaciones()
-        {
-            estaciones= new List<Estaciones>()
-            {
-                new Estaciones{id=1,nombre="Portal",direccion= "Norte",coord_x= 1,coord_y= 10,tipo= "Base"},
-                new Estaciones{id=2,nombre="Portal",direccion= "Sur",coord_x= 10,coord_y= 1,tipo= "Base"},
-                new Estaciones{id=3,nombre="Portal_80",direccion= "Occidente",coord_x= 4,coord_y= 2,tipo= "Base"}
- 
-            };
-        }
- 
+        private readonly AppContext _appContext = new AppContext();
         public IEnumerable<Estaciones> GetAll()
         {
-            return estaciones;
+            return _appContext.Estaciones;
         }
  
         public Estaciones GetEstacionWithId(int id){
-            return estaciones.SingleOrDefault(b => b.id == id);
+            return _appContext.Estaciones.Find(id);
         }
         public Estaciones Create(Estaciones newEstacion)
         {
-           newEstacion.id=estaciones.Max(r => r.id) +1; 
-           estaciones.Add(newEstacion);
-           return newEstacion;
+           var addEstacion = _appContext.Estaciones.Add(newEstacion);
+            _appContext.SaveChanges();
+            return addEstacion.Entity;
         }
 
         public Estaciones Update(Estaciones newEstacion){
-            var estacion= estaciones.SingleOrDefault(b => b.id == newEstacion.id);
+            var estacion=  _appContext.Estaciones.Find(newEstacion.id);
             if(estacion != null){
                 estacion.nombre = newEstacion.nombre;
                 estacion.direccion = newEstacion.direccion;
                 estacion.coord_x = newEstacion.coord_x;
                 estacion.coord_y = newEstacion.coord_y;
                 estacion.tipo = newEstacion.tipo;
+                //Guardar en base de datos
+                 _appContext.SaveChanges();
             }
         return estacion;
         }
-        public Estaciones Delete(int id)
+
+        public void Delete(int id)
         {
-        var estacion= estaciones.SingleOrDefault(b => b.id == id);
-        estaciones.Remove(estacion);
-        return estacion;
+        var estacion = _appContext.Estaciones.Find(id);
+        if (estacion == null)
+            return;
+        _appContext.Estaciones.Remove(estacion);
+        _appContext.SaveChanges();
         }
 
     }

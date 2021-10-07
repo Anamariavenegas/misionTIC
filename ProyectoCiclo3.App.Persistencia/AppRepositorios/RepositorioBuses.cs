@@ -7,52 +7,44 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioBuses
     {
-        List<Buses> buses;
- 
-    public RepositorioBuses()
-        {
-            buses= new List<Buses>()
-            {
-                new Buses{id=1,marca="Audi",modelo= 2020,kilometraje= 100000,num_asientos= 4,placa= "POP678"},
-                new Buses{id=2,marca="Toyota",modelo= 2021,kilometraje= 90000,num_asientos= 16,placa= "OIU859"},
-                new Buses{id=3,marca="Mazda",modelo= 2000,kilometraje= 150000,num_asientos= 24,placa= "YUH859"}
- 
-            };
-        }
+        private readonly AppContext _appContext = new AppContext(); 
  
         public IEnumerable<Buses> GetAll()
         {
-            return buses;
+            return _appContext.Buses;
         }
  
         public Buses GetBusWithId(int id){
-            return buses.SingleOrDefault(b => b.id == id);
+            return _appContext.Buses.Find(id);
         }
 
         public Buses Create(Buses newBus)
         {
-           newBus.id=buses.Max(r => r.id) +1; 
-           buses.Add(newBus);
-           return newBus;
+           var addBus = _appContext.Buses.Add(newBus);
+            _appContext.SaveChanges();
+            return addBus.Entity;
         }
 
         public Buses Update(Buses newBus){
-            var bus= buses.SingleOrDefault(b => b.id == newBus.id);
+            var bus = _appContext.Buses.Find(newBus.id);
             if(bus != null){
                 bus.marca = newBus.marca;
                 bus.modelo = newBus.modelo;
                 bus.kilometraje = newBus.kilometraje;
                 bus.num_asientos = newBus.num_asientos;
                 bus.placa = newBus.placa;
+                //Guardar en base de datos
+                 _appContext.SaveChanges();
             }
         return bus;
         }
-        public Buses Delete(int id)
+        public void Delete(int id)
         {
-        var bus= buses.SingleOrDefault(b => b.id == id);
-        buses.Remove(bus);
-        return bus;
+        var bus =  _appContext.Buses.Find(id);
+        if (bus == null)
+            return;
+        _appContext.Buses.Remove(bus);
+        _appContext.SaveChanges();
         }
-
-    }
+}
 }

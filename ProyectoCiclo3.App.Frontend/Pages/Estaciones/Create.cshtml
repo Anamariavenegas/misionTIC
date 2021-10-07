@@ -8,28 +8,29 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-6 col-md-auto col-lg-4">
-          <label for="id" class="form-label">Digite el ID:</label>
-          <input type="number" class="form-control" id="id" name="id" placeholder="Id" required>
+          <label for="nombre" class="form-label">Digite el nombre:</label>
+          <input type="text" class="form-control"placeholder="Nombre" asp-for="Estacion.nombre">
+          <span class="text-danger" asp-validation-for="Estacion.nombre"></span>
         </div>
         <div class="col-6 col-md-auto col-lg-4">
-          <label for="marca" class="form-label">Digite el nombre:</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-        </div>
-        <div class="col-6 col-md-auto col-lg-4">
-          <label for="modelo" class="form-label">Digite direccion:</label>
-          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" required>
+          <label for="direccion" class="form-label">Digite direccion:</label>
+          <input type="text" class="form-control" placeholder="Direccion" asp-for="Estacion.direccion">
+          <span class="text-danger" asp-validation-for="Estacion.direccion"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="kilometraje" class="form-label">Digite coordenada X:</label>
-          <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="Coord_x" required>
+          <label for="coord_x" class="form-label">Digite coordenada X:</label>
+          <input type="number" class="form-control" placeholder="Coord_x" asp-for="Estacion.coord_x">
+          <span class="number-danger" asp-validation-for="Estacion.coord_x"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="numero_asientos" class="form-label">Digite coordenada Y:</label>
-          <input type="number" class="form-control" id="coord_y" name="coord_y"placeholder="Coord_y" required>
+          <label for="coord_y" class="form-label">Digite coordenada Y:</label>
+          <input type="number" class="form-control" placeholder="Coord_y" asp-for="Estacion.coord_y">
+          <span class="number-danger" asp-validation-for="Estacion.coord_y"></span>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="Placa" class="form-label">Digite el tipo de estacion:</label>
-          <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo" required>
+          <label for="tipo" class="form-label">Digite el tipo de estacion:</label>
+          <input type="text" class="form-control" placeholder="Tipo" asp-for="Estacion.tipo">
+          <span class="text-danger" asp-validation-for="Estacion.tipo"></span>
         </div>
       </div>
       <br>
