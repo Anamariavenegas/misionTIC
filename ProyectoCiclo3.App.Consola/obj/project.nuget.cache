@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g5ru+v6wpZnM2HGVSuIlv4KtKjKs+1LoBfyVzJtycMCl59E3C08PjGQDB2Zegt2j0xx9UtGw0+g6EvfK5N5wTA==",
+  "dgSpecHash": "pExBItiMwDscizjrnMqCJWhw9aMGJC1PrwWo6zbKsb5bs+S/3NiMwIRQA0Hw+4zbZwVIH60TlvGA4xUQOc+S7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anamaria Venegas\\Desktop\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
+  "projectFilePath": "D:\\AVP\\MISIONTIC\\CICLO 3\\DESARROLLO DE SOFTWARE\\PROYECTO PERSONAL\\misionTIC\\ProyectoCiclo3.App.Consola\\ProyectoCiclo3.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Anamaria Venegas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
