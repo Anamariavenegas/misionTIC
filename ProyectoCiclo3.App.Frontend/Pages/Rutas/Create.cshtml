@@ -9,29 +9,29 @@
       <div class="row justify-content-md-center">
         <div class="col-6 col-md-auto col-lg-4">
           <label for="origen" class="form-label">Digite el origen:</label>
-          <select asp-for="Ruta.origen" class="form-control">
+          <select name="origen" class="form-control">
           <option value="">Selecciona el origen</option>
           @foreach (var estacion in Model.Estaciones)
           {
-              <option value="@estacion.id">@estacion.nombre @estacion.direccion - @estacion.coord_x - @estacion.coord_y - @estacion.tipo</option>
+              <option value="@estacion.id">@estacion.nombre @estacion.direccion</option>
           }
           </select>
         </div>
 
         <div class="col-6 col-md-auto col-lg-4">
           <label for="destino" class="form-label">Digite el destino:</label>
-          <select asp-for="Ruta.destino" class="form-control">
+          <select name="destino" class="form-control">
           <option value="">Selecciona el destino</option>
           @foreach (var estacion in Model.Estaciones)
           {
-              <option value="@estacion.id">@estacion.nombre @estacion.direccion - @estacion.coord_x - @estacion.coord_y - @estacion.tipo</option>
+              <option value="@estacion.id">@estacion.nombre @estacion.direccion</option>
           }
           </select>
         </div>
 
         <div class="col-6 col-md-4 col-lg-4">
           <label for="tiempo_estimado" class="form-label">Digite tiempo estimado:</label>
-          <input type="number" class="form-control" placeholder="Tiempo_estimado" asp-for="Ruta.tiempo_estimado">
+          <input type="number" class="form-control" placeholder="Tiempo_estimado" name="tiempo_estimado">
           <span class="number-danger" asp-validation-for="Ruta.tiempo_estimado"></span>
         </div>
       </div>
